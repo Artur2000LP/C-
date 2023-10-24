@@ -1,0 +1,50 @@
+/* 1 hacer una estructura llamada corredor en el cual se tendran los siguientes campos 
+nombre,edad,sexo,club,pedir datos al usuario para un corredor, y asignarle una categoria de competicion 
+- juvenil <=18 años
+- señor <=40 años
+- veterano >40 años
+posterior mente debe imprimer todos los datos del corredor, incluido 
+su categoooria de competicion */
+#include <iostream>
+#include<conio.h>
+using namespace std;
+
+struct Corredor{
+    char nombre[30];
+    int edad;
+    char sexo[10];
+    char club[20];
+}c1;
+
+
+int main(){
+    cout<<"Nombre: ";
+    cin.getline(c1.nombre,30,'\n');
+    cout<<"Edad: ";
+    cin>>c1.edad;
+    fflush(stdin);
+    cout<<"Sexo: ";
+    cin.getline(c1.sexo,10,'\n');
+    cout<<"club: ";
+    cin.getline(c1.club,20,'\n');
+
+    if(c1.edad <= 18){
+        strcpy(categoria,"juvenil");
+    }
+    else  if(c1.edad <= 40 ){
+        strcpy(categoria,"senior");
+    }else {
+        strcpy(categoria."veterano");
+    }
+
+    cout<<"\n\n Datos del Corredor: "<<endl;
+    cout<<"Nombre: "<<c1.nombre<<endl;
+    cout<<"Edad: "<<c1.edad<<endl;
+    cout<<"Sexo: "<<c1.sexo<<endl;
+    cout<<"Club: "<<c1.club<<endl;
+    cout<<"Categoria: "<<categoria<<endl;
+    
+
+    getch();
+    return 0;
+}
